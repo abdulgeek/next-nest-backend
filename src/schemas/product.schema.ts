@@ -28,15 +28,13 @@ export class Product {
 
   discountPrice: number;
 
-  @Prop({ required: true })
+  @Prop({ type: Types.ObjectId, required: true, ref: 'User' })
   user: {
     type: Types.ObjectId;
-    ref: 'User';
   };
-
+  @Prop({ type: Types.ObjectId, ref: 'Rating' })
   rating: {
     type: Types.ObjectId;
-    ref: 'Rating';
   };
 }
 

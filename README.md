@@ -10,4 +10,4 @@ npm i
 ```
 npm run start:dev
 ```
-![schema]('./schemas.png)
+![schema]('./schemas.png')
