@@ -14,10 +14,10 @@ export class Product {
   @Prop({ required: true })
   price: number;
 
-  @Prop({ required: true })
+  @Prop()
   tages: string[];
 
-  @Prop({ required: true })
+  @Prop()
   totalReviews: number = 0;
 
   @Prop({ required: true })
@@ -26,6 +26,7 @@ export class Product {
   @Prop({ required: true })
   stock: number;
 
+  @Prop()
   discountPrice: number;
 
   @Prop({ type: Types.ObjectId, required: true, ref: 'User' })
