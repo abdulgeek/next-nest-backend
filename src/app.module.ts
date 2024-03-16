@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { UsersController } from './user/user.controller';
 import { UsersService } from './user/user.service';
 import { UsersModule } from './user/user.module';
@@ -9,6 +7,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 import configuration from './config/config';
 import { mongooseConfig } from './config/mongoose.config';
 import { MongooseFeatureModule } from './config/mongoose.module';
+import { ProductController } from './product/product.controller';
+import { ProductService } from './product/product.service';
+import { ProductModule } from './product/product.module';
 
 @Module({
   imports: [
@@ -20,8 +21,9 @@ import { MongooseFeatureModule } from './config/mongoose.module';
     }),
     MongooseFeatureModule,
     UsersModule,
+    ProductModule,
   ],
-  controllers: [AppController, UsersController],
-  providers: [AppService, UsersService],
+  controllers: [UsersController, ProductController],
+  providers: [UsersService, ProductService],
 })
 export class AppModule {}
