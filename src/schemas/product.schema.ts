@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose, { Document, Types } from 'mongoose';
+import { Document, Types } from 'mongoose';
 
 export type ProductDocument = Product & Document;
 
@@ -15,7 +15,7 @@ export class Product {
   price: number;
 
   @Prop()
-  tages: string[];
+  tags: string[];
 
   @Prop()
   totalReviews: number = 0;
@@ -29,6 +29,9 @@ export class Product {
   @Prop()
   discountPrice: number;
 
+  @Prop({ required: true })
+  images: string[];
+
   @Prop({ type: Types.ObjectId, required: true, ref: 'User' })
   user: {
     type: Types.ObjectId;
@@ -40,5 +43,3 @@ export class Product {
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);
-
-export const ProductModel = mongoose.model<Product>('Product', ProductSchema);

@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { UsersController } from './user/user.controller';
-import { UsersService } from './user/user.service';
 import { UsersModule } from './user/user.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
