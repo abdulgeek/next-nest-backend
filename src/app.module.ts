@@ -7,8 +7,6 @@ import { MongooseModule } from '@nestjs/mongoose';
 import configuration from './config/config';
 import { mongooseConfig } from './config/mongoose.config';
 import { MongooseFeatureModule } from './config/mongoose.module';
-import { ProductController } from './product/product.controller';
-import { ProductService } from './product/product.service';
 import { ProductModule } from './product/product.module';
 
 @Module({
@@ -23,7 +21,5 @@ import { ProductModule } from './product/product.module';
     UsersModule,
     ProductModule,
   ],
-  controllers: [UsersController, ProductController],
-  providers: [UsersService, ProductService],
 })
 export class AppModule {}
