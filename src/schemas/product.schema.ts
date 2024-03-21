@@ -15,7 +15,7 @@ export class Product {
   price: number;
 
   @Prop()
-  tages: string[];
+  tags: string[];
 
   @Prop()
   totalReviews: number = 0;
@@ -28,6 +28,9 @@ export class Product {
 
   @Prop()
   discountPrice: number;
+
+  @Prop({ required: true })
+  images: string[];
 
   @Prop({ type: Types.ObjectId, required: true, ref: 'User' })
   user: {

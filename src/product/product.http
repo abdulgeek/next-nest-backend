@@ -1,0 +1,36 @@
+### create a product
+POST http://localhost:3000/product
+Content-Type: application/json
+
+{
+  "title": "Sample Product2",
+  "description": "This is a sample product description.",
+  "price": 50.00,
+  "tags": ["sample", "test", "product"],
+  "totalReviews": 10,
+  "category": "Sample Category",
+  "stock": 100,
+  "discountPrice": 45.00,
+  "images":["images.jpg","images.png"],
+  "user": "60eb979af86ff8522c509e40",
+  "rating": "60eb97a5f86ff8522c509e41"
+}
+
+### get all products
+GET http://localhost:3000/product/
+
+### get product by id
+GET http://localhost:3000/product/65fb3e2adeb8c8944f1dc866
+
+
+### update product
+PATCH http://localhost:3000/product/65fb3e2adeb8c8944f1dc866
+Content-Type: application/json
+
+{
+    "title":"Mac book 13 pro",
+    "description": "This is Mac book 13 pro good for coding."
+}
+
+### delete product
+DELETE http://localhost:3000/product/65fb3e2adeb8c8944f1dc866
