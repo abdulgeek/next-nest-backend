@@ -12,7 +12,7 @@ export class Review {
   product: { type: Types.ObjectId };
 
   @Prop({ required: true })
-  Description: { type: string };
+  description: string;
 }
 
 export const ReviewSchema = SchemaFactory.createForClass(Review);

@@ -10,6 +10,9 @@ export class Rating extends Document {
 
   @Prop({ required: true, max: 5 })
   rating: number;
+
+  @Prop({ type: Types.ObjectId, ref: 'Product', required: true })
+  product: Types.ObjectId;
 }
 
 export const RatingSchema = SchemaFactory.createForClass(Rating);

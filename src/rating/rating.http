@@ -1,0 +1,26 @@
+POST   http://localhost:3000/rating
+Content-Type: application/json
+
+{
+    "user":"65facd5ec0f75006d6e58e6f",
+    "product":"65fb415349f960e3e58f2e91",
+    "rating":5
+}
+
+### get all rating
+GET  http://localhost:3000/rating
+
+### 
+GET http://localhost:3000/rating/65fe8ad16502bec5c4b1f093
+
+
+### update rating
+PATCH http://localhost:3000/rating/65fe8ad16502bec5c4b1f093
+Content-Type: application/json
+
+{
+    "rating":4
+}
+
+### delete rating
+DELETE http://localhost:3000/rating/65fe8ad16502bec5c4b1f093

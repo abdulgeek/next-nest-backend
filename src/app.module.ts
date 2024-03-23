@@ -6,6 +6,8 @@ import configuration from './config/config';
 import { mongooseConfig } from './config/mongoose.config';
 import { MongooseFeatureModule } from './config/mongoose.module';
 import { ProductModule } from './product/product.module';
+import { RatingModule } from './rating/rating.module';
+import { ReviewModule } from './review/review.module';
 
 @Module({
   imports: [
@@ -17,7 +19,9 @@ import { ProductModule } from './product/product.module';
     }),
     MongooseFeatureModule,
     UsersModule,
+    RatingModule,
     ProductModule,
+    ReviewModule,
   ],
 })
 export class AppModule {}
