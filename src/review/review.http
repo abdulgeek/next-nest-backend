@@ -1,0 +1,26 @@
+POST http://localhost:3000/review
+Content-Type: application/json
+
+{
+    "user":"65facd5ec0f75006d6e58e6f",
+    "product":"65fb415349f960e3e58f2e91",
+    "description":"This is wonderful product"
+}
+
+### get all reviews
+
+GET http://localhost:3000/review
+
+### get review by id
+GET http://localhost:3000/review/65fe9bce94dfa3a370fcf801
+
+### update review
+PATCH http://localhost:3000/review/65fe9bce94dfa3a370fcf801
+Content-Type: application/json
+
+{
+    "description":"Wow! Amazing!"
+}
+
+### delete review
+DELETE http://localhost:3000/review/65fe9bce94dfa3a370fcf801
